@@ -33,11 +33,24 @@ def exemplo_colaborador():
     print("Tem Férias?", marcus.tem_ferias)
 
 
+class aluno:
+    # Método construtor
+    def __init__(self, nome: str):
+        self.nome = nome
+
+def exemplo_aluno():
+    # Instanciando um objeto(MAtheus) da classe aluno
+    matheus: aluno = aluno("Matheus da Silva")
+
+    print("Aluno: ", matheus.nome)
+
+
 # Ponto de inicio da aplicação
 if __name__ == "__main__":
     # Executar a função do colaborador
-    exemplo_colaborador()
-
+    exemplo_aluno()
+    
+# Executar = py index.py
 #git status
 #git add .
 #git commit -m "Exemplos de Classes"
