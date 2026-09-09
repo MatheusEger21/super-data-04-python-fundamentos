@@ -9,7 +9,7 @@ class Veiculo:
         self.velocidade = self.velocidade + valor
 
     def frear(self, valor):
-        self.velocidade -= valor
+        self.velocidade = self.velocidade - valor
 
         if self.velocidade < 0:
             self.velocidade = 0
@@ -25,11 +25,15 @@ class Carro(Veiculo):
         self.quantidade_portas = quantidade_portas
 
     def apresentar_dados(self):
-        print("----- DADOS DO CARRO -----")
-        print(f"Marca: {self.marca}")
-        print(f"Modelo: {self.modelo}")
-        print(f"Velocidade atual: {self.velocidade} km/h")
-        print(f"Quantidade de portas: {self.quantidade_portas}")
+
+        if self.velocidade == 0:
+            print("A velocidade do carro não pode ser 0.")
+        else:
+            print("----- DADOS DO CARRO -----")
+            print(f"Marca: {self.marca}")
+            print(f"Modelo: {self.modelo}")
+            print(f"Velocidade atual: {self.velocidade} km/h")
+            print(f"Quantidade de portas: {self.quantidade_portas}")
 
 class Moto(Veiculo):
 
@@ -42,6 +46,9 @@ class Moto(Veiculo):
         self.cilindradas = cilindradas
 
     def apresentar_dados(self):
+        if self.velocidade == 0:
+            print("A velocidade da moto não pode ser 0.")    
+        else:
             print("----- DADOS DA MOTO -----")
             print(f"Marca: {self.marca}")
             print(f"Modelo: {self.modelo}")
