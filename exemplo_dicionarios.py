@@ -36,7 +36,7 @@ def exemplo_dicionario_completo():
     print("Nome da Judity: ", alunos["89202"]["nome"])
     print("Idade da Judity: ", alunos["89202"]["idade"])
     print("CPF da Judity: ", alunos["89202"]["CPF"])
-    a
+    
 
 
 if __name__ == "__main__":
