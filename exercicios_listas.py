@@ -53,6 +53,5 @@ def lista_jogos():
     print(f"\nValor total dos jogos R$ {soma:.2f}")
 
 
-
 if __name__ == "__main__":
     lista_jogos()
