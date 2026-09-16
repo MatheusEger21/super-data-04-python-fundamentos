@@ -21,6 +21,7 @@
 
 from pathlib import Path
 from datetime import date
+from typing import Union
 
 def criar_arquivo_txt():
     with open("mensagens.txt", "w", encoding="utf-8") as arquivo:
@@ -155,7 +156,7 @@ if __name__ == "__main__":
     missoes = obter_missoes()
 
     media: float = calcular_media_missoes(missoes)
-    print("Média:", media)
+    print(f"Média: {media:.2f}") 
 
     maior_quantidade_missoes, personagem = descobrir_maior_quantidade_missoes(missoes)
     print(personagem, "Maior quantidade de missões:", maior_quantidade_missoes)
